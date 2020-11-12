@@ -1,0 +1,32 @@
+</head>
+<body>
+    <div class="login-div">
+        <div class="logo"></div>
+        <div class="title">Bright mind</div>
+        <form action="/signup" method="POST" autocomplete="off">
+            <div class="fields">
+                <caption style="color:black" >userName:</caption>
+                <div class="username"><input type="username" class="user-input" name="name" value={{userName}} required/></div>
+                <caption style="color:black" >password:</caption>
+                <div class="password"><input type="password" class="user-input" name="password" placeholder={{password}} onmousedown="this.type='text'" onmouseup="this.type='password'" onmousemove="this.type='password'" required/></div>
+                 <div style="color:red">
+                      {{message1}}
+                 </div>
+                <caption style="color:black" >email:</caption>
+                <div class="password"><input type="email" class="user-input"  name="email" value={{Email}} required/></div>
+                <caption style="color:black" >state:</caption>
+                <div class="password"><input type="text" class="user-input" name="state" value={{State}} required/></div>
+                <caption style="color:black" >tel:</caption>
+                <div class="password"><input type="tel" class="user-input" name="tel" placeholder={{PhoneNO}}  required/></div>
+            </div>
+             <div style="color:red">
+                {{message}}
+            </div>
+            <button class="signin-button">Sign up</button>
+            <div class="link">
+                <a href="/code">Forget password</a> or <a href="/login">Login</a>
+            </div>  
+        </form>
+    </div>
+</body>  
+</html>

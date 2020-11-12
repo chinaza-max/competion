@@ -1,0 +1,23 @@
+
+<body>
+    <form action="/changedPassword" method="POST">
+         <div class="login-div">
+            <div class="logo"></div>
+            <div class="title">BRIGHT MIND</div>
+            <div class="sub-title">Enter the phone No use for registeration</div>
+            <div class="fields">
+                <div class="username"><input type="tel" class="user-input" name="tel"  placeholder="No:"  autocomplete="off" /></div>
+                <div class="username"><input type="text" class="user-input" name="password" placeholder="Enter NewPassword"  autocomplete="off" /></div>
+
+            </div>
+            <button class="signin-button">submit</button>
+            <div style="color:red">
+                {{message}}
+            </div>
+            <div class="link">
+                <a href="/login">Back</a>or<a>resend</a>
+                <p style="color: rgb(65, 68, 68); over-flow:scroll">make sure phone No is correct</p>
+            </div>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,98 @@
+  <div id="container">
+        <div class="nav-container">
+            <div class="nav-content" id="display">display</div>
+            <div class="nav-content" id="merge">merge</div>
+            <div class="nav-content" id="merges">merges</div>
+            <div class="nav-content"><a id="reset">Reset</a></div>
+        </div>
+        <span id="/home/dashBoard/{{id}}/resetCollection" class="resetRoute"></span>
+        <div class="nav-container2">
+            <div class="nav-content2" id="display2">display</div>
+            <div class="nav-content2" id="merge2">merge</div>
+            <div class="nav-content2" id="merges2">merges</div>
+             <div class="nav-content2"><a id="reset2">Reset</a></div>
+        </div>
+        <div id="container2">
+            <a id="phone"  href={{phone}}></a>
+            <div id="slider">
+                <div id="first">
+                    <table>
+                        <tr>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>state</th>
+                            <th>gamePLayed</th>
+                        </tr>
+                         {{#each data}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.state}}</td>
+                            <td>{{this.gamePlayered}}</td>
+                        </tr>
+                         {{/each }}
+                    </table>
+                </div>
+                <div id="second">
+                    <table>
+                        <tr>
+                            <td>opponent 1</td>
+                            <td>opponent 2</td>
+                        </tr>
+                          {{#each data2}}
+                        <tr>
+                            <td>{{this.user1}}</td>
+                            <td>{{this.user2}}</td>
+                        </tr>
+                         {{/each }}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+let route=document.querySelector(".resetRoute").id   
+let phone=document.getElementById("phone").getAttribute("href") 
+//for  pc 
+document.getElementById("merge").addEventListener("click",()=>{
+    alert("we are good to go")
+    $.post('/merge/'+phone,()=>{
+               // swal("merge", "You can check", "success");
+            });
+})
+//for mobile device
+document.getElementById("merge2").addEventListener("click",()=>{
+    alert("we are good to go")    
+    $.post('/merge/'+phone,()=>{
+        //swal("merge", "You can check", "success");
+    });
+})
+document.getElementById("reset").addEventListener("click",()=>{
+     $.post(route,()=>{})
+})
+document.getElementById("reset2").addEventListener("click",()=>{
+     $.post(route,()=>{})
+})
+
+document.getElementById("merges").addEventListener("click",func)
+function func(){
+    document.getElementById("slider").style.transform='translateX('+(-500)+'px)';
+}
+document.getElementById("display").addEventListener("click",func2)
+function func2(){
+    document.getElementById("slider").style.transform='translateX('+(0)+'px)';
+}
+
+document.getElementById("merges2").addEventListener("click",func3)
+function func3(){
+    document.getElementById("slider").style.transform='translateX('+(-280)+'px)';
+}
+document.getElementById("display2").addEventListener("click",func24)
+function func24(){
+    document.getElementById("slider").style.transform='translateX('+(0)+'px)';
+
+}
+</script>

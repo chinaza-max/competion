@@ -1,0 +1,148 @@
+    <title>tic tac toe Game</title>
+    <link rel="shortcut icon" href="#">
+<body>
+    <div class="wrapper">
+        <div class="box2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="nav-container">
+            <div id="flex_container">
+                <div id="online">Online Player
+                    <ul>
+                        <li id="host">Host</li>
+                        <li id="join">Join</li>
+                    </ul>
+                </div>
+                <div id="sound">Sound
+                    <ul>
+                        <li id="on">No</li>
+                        <li id="off">Off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div><h6 id="display"></h6></div>      
+        <div id="conection-container" >
+            <img src="/img/remove-icon.png" alt="image" onclick="removeOnclick()">
+            <div id="slide">
+                <div id="form">
+                    <div id="innerDiv">
+                        <form id="username-form" autocomplete="off">
+                            <input  id="UserName"  placeholder="Enter UserName" style="background-color: rgba(149, 149, 150, 0);" required>
+                        </br>
+                            <button id="create_1">Host</button>
+                        </form>
+                    </div>
+                </div>             
+                <div id="online-names">
+                    <img src="/img/remove-icon.png" alt="image" onclick="removeOnclick()">
+                    <h4> select opponent</h4>
+                    <div id="list-ofName">
+                        <ol id="orderList">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="join-container" >
+            <img src="/img/remove-icon.png"  onclick="removeOnclick()">
+            <div id="second-innerdiv">
+                <form id="second-userName-form" autocomplete="off">
+                    <input id="second-userName" placeholder="Enter UserName" style="background-color: rgba(149, 149, 150, 0);" required> 
+                    </br>                                        
+                    <button id="second-create">Join</button>
+                </form>
+            </div>
+        </div>
+
+       
+
+
+
+
+        <div id="winner_container">
+            <div id="display_winner"></div>
+        </div>
+        <div id="count_container">
+            <div id="display_count"></div>
+        </div>
+        <div id="section">
+            <div id="left_side">
+                <div id="left_side1">
+                    <div id="point1"></div>
+                </div>
+                <div id="left_side2">
+                    <div id='name1'></div>
+                </div>
+            </div>
+            <div id="center">
+                <div id="center1">
+                    <div id="num_played"></div>
+                </div>
+                <div id="center2">
+                    <div id='nxt_player'></div>
+                </div>
+            </div>
+            <div id="right_side">
+                <div id="right_side1">
+                    <div id="point2"></div>
+                </div>
+                <div id="right_side2">
+                    <div id='name2'></div>
+                </div>
+            </div>
+        </div>
+        <div id="section2">
+            <div id="table_container">
+                <table id="table1" >
+                    <tr class='first-row' >
+                            <td class='id1' id='a'></td>
+                            <td class='id1' id='b'></td>
+                            <td class='id1' id='c'></td>
+                    </tr> 
+                    <tr class="second-row"> 
+                            <td class='id1' id='d'></td>
+                            <td class='id1' id='e'></td>
+                            <td class='id1' id='f'></td>
+                    </tr> 
+                    <tr class="third-row">
+                            <td class='id1' id='g'></td>
+                            <td class='id1' id='h'></td>
+                            <td class='id1' id='i'></td>
+                        </tr>
+                </table>
+                </div>
+        </div>
+        <div id="section3">
+            <div id="game_over"></div>
+        </div>
+        <audio  loop id='music'>
+            <source src='/AUD-20200609-WA0006.mp3'>
+      </audio>
+        <div class='preload' style="background-color: blue;" >
+            <span class='letter o'>o</span>
+            <span class='letter x'>x</span>
+            <span class="letter o2">o</span>
+            <span  class="letter x2">x</span>
+            <div class="load">loading....</div>
+        </div>       
+    </div>
+    <div id={{id}} class="class-id"></div>
+    <div id={{name}} class="class-id2"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="/socket.io/socket.io.js"></script>
+    <script src="/script/client.js"></script>  
+    </body>
+ 

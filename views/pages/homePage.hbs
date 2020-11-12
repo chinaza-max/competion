@@ -1,0 +1,283 @@
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<div id="container">
+        <div id="displayOnlineNames">
+
+        </div>
+        <div class="nav">
+            <div id="logo">LOGO</div>
+            <div id="nav-content">
+                <ul>
+                    <li><a href="" id="active">Home</a></li>
+                    <li><a href="/home/dashBoard/{{user._id}}" class="navbars">Dashboard</a></li>
+                    <li><a href="/home/practice" class="navbars">Practice</a></li>
+                    <li><a href="/home/openBet" class="navbars">Open Bet</a></li>
+                    <li><a href="/home/createBet" class="navbars">Create Bet</a></li>
+                    <li><a href="#chapionship_data_container" id="about">About</a></li>
+                    <li><a href="/home/settings" class="navbars">Settings</a></li>
+                </ul>
+            </div>
+            <div id="nav-content2">
+                <div><a>
+            <form action="/logout?_method=DELETE" method="POST" >
+                <button type="submit">Log out</button>
+            </form>
+                </a></div>
+                <div>{{user.name}}</div>
+            </div>
+        </div>
+
+        
+
+
+
+
+        <div id="menu" onclick="open_nav()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+        <div id="nav-content2_2">
+            <div id="display_name">{{user.name}}</div>
+            <div id="logout_container"><a id="logout">
+                 <form action="/logout?_method=DELETE" method="POST" >
+                    <button type="submit">Log out</button>
+                 </form>
+            </a></div>
+        </div>
+        <div id="nav2">
+            <div id="menu2" onclick="close_nav()">
+                <div id="bar1_1" class="bar2"></div>
+                <div id="bar2_2" class="bar2"></div>
+                <div id="bar3_3" class="bar2"></div>
+            </div>
+            <div id="intro">
+                <div class="logo">
+                    <img src="/img/remove-icon.png">
+                </div>
+                <h5><i>Bright Minds</i></h5>
+                <div class="social_media">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </div>
+            </div>
+            <a href="">Home</a>
+            <a href="/home/dashBoard/{{user._id}}">Dashboard</a>
+            <a href="/home/practice">Practice</a>
+            <a href="/home/betBet">Open Bet</a>
+            <a href="/home/createBet">Create Bet</a>
+            <a href="#about">About</a>
+            <a href="/home/settings">Settings</a>
+        </div>
+        
+ 
+        <div id="section1">
+            <div class="banner">
+                <h1>THINK OUT SIDE THE BOX</h1>
+                <img src="/img/banner.jpg" alt="">
+            </div>
+            <div class="v_shape"></div>
+        </div>
+
+        <div id="section2">
+            <div id="section2_content">
+                <h4>Registration Ends</h4>
+
+                <div class="end_registration">
+                    <div>
+                        <table id="table">
+                            <tr>
+                                <th>
+                                    <h3 id="days">120</h3>
+                                    <h3>Days</h3>
+                                </th>
+                                <th>
+                                    <h3 id="hours">4</h3>
+                                    <h3>Hours</h3>
+                                </th>
+                                <th>
+                                    <h3 id="minutes">12</h3>
+                                    <h3>Minute</h3>
+                                </th>
+                                <th>
+                                    <h3 id="seconds">22</h3>
+                                    <h3>Seconds</h3>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="register">
+                    <a id="register_click" >Click To Register</a>
+                </div>
+                <a  style="width: 0px; height:0px" id="id_holder" href="{{user._id}}"></a>
+
+                <div id="chapionship_data_container">
+                    <h3>TURNAMENT DATE</h3>
+                    <h6>5/04/2020</h6>
+                </div>
+            </div>
+        </div>
+        <section id="section2.2">
+            <div id="opponent">
+                <div id="player1" class="players">{{player1}}
+                    <span id="indicator1" class="indicators"></span>
+                    <span id="vs">{{vs}}</span>
+                </div>
+                <div id="player2" class="players">{{player2}}
+                    <span id="indicator2" class="indicators"></span>
+                </div>
+            </div>
+            <div id="opponent2"><a href="/home/game/{{link}}">{{click}}</a></div>
+        </section>
+         
+
+        <div id="section3">
+                <h4 id="about">About</h4>
+                <div id="section3_body">
+                    <p>Tic Tac Toe online games (also knwon as Noughts and crosses, Xs and Os, XOX Game, 3 in a row) is a very popular children’s pencil and paper board game, which is often played and enjoyed by many adults, as well. Because of its simplicity, this 3 row per 3 row board game may seem trivial at first, however, Tic Tac Toe involves its share of analytics and rapidity. The game is a lot of fun for players of all ages and provides one with a great brain workout too! You may play Tic Tac Toe online with other players or challenge computer, in order to win tournaments and "be given a price". Do read our strategies and tactics to help you achieve your goal to become the Number One player! This multiplayer board game enables you to play live with hundreds of real players from the entire globe, wherever you may be and whatever language you may speak!</p>
+                    <h4>About Tournament</h4>
+                    <p>After each round players are eliminated, the winner get their name display on the Dashboard base on the number of game they played before winning their opponent,it goes like that until two players are left standing and only one gets to win the price.</p>
+                    <h4>Two kind of tournaments</h4>
+                    <p>Free Tournament          And      Paid Tournament</p>
+                    <h4>How to win Tic Tac Toe board game</h4>
+                    <p>Two players can play with each other by using a 3×3 board in Tic Tac Toe. One player chooses crosses, the opposing player uses noughts and the first player to align 3 of their identical symbols, either noughts or crosses, (horizontally, vertically or diagonally) wins the game. </p>
+                   
+                    <h4>Strategies and tactics to win at noughts and crosses game</h4>
+                    <p>Tic Tac Toe is a “zero-sum game”, meaning the gain of one player will signify the loss of the other. In the event both players will play perfectly, the game ends in a draw. Here are the most useful strategies and tactics when you play Tic Tac Toe game.</p><br/>
+                    <p>
+                        ** When you begin to play tik tak toe<br/>
+                        Play your first X in a corner<br/>
+                        In this example, the player who has the Xs will play first to force a win. When you are the first to play, place your X in a corner square. If your opponent does not play the center square, you are most certainly assured to win! Play your second X in the center square to force your opponent to block you. Then place your third X in one of the border squares and next to the square where you made your first move. By doing this, you have a double winning move and your opponent will only be able to block one of them. Giving you the victory!
+                    </p><br/>
+                    <p>
+                       ** If your opponent takes the center<br/>
+                        When your opponent follows by choosing the center square as their first move, you may still have a chance of winning if your opponent makes an error later in the game. Otherwise, a perfect series of moves by each player will end in a draw. 
+                    </p><br/>
+                    <p>
+                      **  Win at Tick Tack Toe when your opponent does not follow with the center
+                        If your opponent moves their O somewhere else other than in the center square, your victory is assured. Respond by placing your second X in a corner while keeping an empty square next to your initial X. 
+                    </p><br/>
+                    <p>
+                    **  When your opponent begins at tik tak toe<br/>
+                        Your opponent makes the first move of the game by placing their O in a corner square<br/>
+                        In this case, and when you're not the starting player, you still have the opportunity to end in a draw if you don’t make any mistakes. When your opponent places an O in a corner square and as their first move, systematically put your X in the center square. If your opponent places their second O in one of the remaining corner squares, do not place your X in a corner, but rather in one of the squares on an edge. This will force your opponent to react rather than attack. You can then expect to win if your opponent makes a mistake, otherwise the game will end in a force draw. 
+                    </p><br/>
+                    <p>
+                    **  When your opponent begins the game by making their first move on an edge at Tic Tac Toe<br/>
+                        If your opponent is an inexperienced player, chances are that they will start on an edge.<br/>
+                        Place your X in the center square immediately<br/>
+                        If your opponent reacts by placing their second O opposite from their first move (creating an O-X-O), then place your second X in a corner square.
+                        If your opponent places their third O in a square that blocks your winning move (creating a X-X-O diagonal), then make your next move by placing your X into another corner square, enabling you to block your opponent and to create a double diagonal. This will ensure your victory!
+                    </p>
+                </div>
+        </div>
+        <div id="section4">
+            <form action="">
+                <div id="section4-container">
+                        <textarea placeholder="Ask quesion or lay complain..."></textarea>
+                         <div>
+                            <button id="submit_quesion" type="button">submit</button>
+                         </div>  
+                </div>
+            </form>
+        </div>
+        <div id="footer">
+            <div id="license">
+                <p>© 2020 Bright Mind's, All Rights Reserved.</p>
+            </div>
+            <div id="facebook">
+                <a><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <p>follow us on facebook</p>
+            </div>
+        </div>
+    </div>
+     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+                document.getElementById("about").addEventListener("click",()=>{
+                    document.getElementById("about").style.background="#05055B";
+                    document.getElementById("about").style.color="white";
+                    document.getElementById("active").style.background="#ecf0f1";
+                    document.getElementById("active").style.color="#05055B";
+                })
+
+            
+                window.onscroll = function() {scrollFunction()};
+                function scrollFunction() {
+                    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+                            document.getElementById("about").style.background="#05055B";
+                            document.getElementById("about").style.color="white";
+                            document.getElementById("active").style.background="#ecf0f1";
+                            document.getElementById("active").style.color="#05055B";
+                    }
+                    else{
+                            document.getElementById("about").style.background="#ecf0f1"
+                            document.getElementById("about").style.color="#05055B";
+                            document.getElementById("active").style.background="#05055B";
+                            document.getElementById("active").style.color="white";
+                    }
+                }
+                document.getElementById("register_click").addEventListener("click",()=>{
+                                let id=document.getElementById("id_holder").getAttribute("href")
+                                $.post('/register/'+id,()=>{
+                                    swal("Registered", "You can check your name at the dashboard", "success");
+                                });
+                })
+
+                document.getElementById('submit_quesion').addEventListener('click',()=>{
+                console.log($("textarea").val())
+                const message=$("textarea").val()
+                 const data={
+                     message
+                 }
+
+                  $.post('/email',data,()=>{
+                    swal("Submitted", "You would be contacted via email", "success");
+                    document.getElementsByClassName("register").style.display="none"
+                });
+                $("textarea").val("");
+                 })
+
+
+    function open_nav(){
+        document.getElementById('nav2').style.width="220px";
+        document.getElementById('menu').style.width="none";
+    }
+    function close_nav(){
+        document.getElementById('nav2').style.width="0";
+        document.getElementById('menu').style.width="none";
+   }
+
+
+   function countdown(){
+    let now=new Date();
+    let eventDate=new Date("oct 13,2020 00:00:00");
+    
+    let currentTime=now.getTime();
+    let eventTime=eventDate.getTime();
+    let remTime=eventTime-currentTime;
+    
+    let second=1000;
+    let minute=second*60;
+    let hour=minute*60;
+    let day=hour*24;
+
+    let d=Math.floor( remTime/(day));
+    let h=Math.floor((remTime%(day))/(hour));
+    let m=Math.floor((remTime%(hour))/(minute));
+    let s=Math.floor((remTime%(minute))/(second));
+
+
+
+    document.getElementById("days").textContent=d;
+    document.getElementById("hours").textContent=h;
+    document.getElementById("minutes").textContent=m;
+    document.getElementById("seconds").textContent=s;
+
+    setTimeout(countdown,1000)
+}
+     countdown()
+
+    const sock=io();
+</script>

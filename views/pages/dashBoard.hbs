@@ -1,0 +1,28 @@
+
+<body>
+    <div id="container">
+        <div id="container2">
+                <div id="first">
+                    <table>
+                        <tr>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>state</th>
+                             <th>gamePLayed</th>
+                        </tr>
+
+                         {{#each data}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.state}}</td>
+                            <td>{{this.gamePlayered}}</td>
+                        </tr>
+                         {{/each }}
+                         
+                    </table>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
